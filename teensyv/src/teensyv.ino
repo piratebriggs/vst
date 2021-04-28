@@ -32,8 +32,8 @@
 #endif
 
 //#define CONFIG_VECTREX
-//#define CONFIG_VECTORSCOPE
-#define CONFIG_LBO51MA
+#define CONFIG_VECTORSCOPE
+//#define CONFIG_LBO51MA
 
 // If you just want a scope clock,
 // solder a 32.768 KHz crystal to the teensy and provide a backup
@@ -41,7 +41,7 @@
 #undef CONFIG_CLOCK
 
 // Sometimes the X and Y need to be flipped and/or swapped
-#define FLIP_X
+#undef FLIP_X
 #undef FLIP_Y
 #define SWAP_XY
 
@@ -68,7 +68,7 @@
 #define REST_X		0	// wait off screen
 #define REST_Y		0
 
-#undef FULL_SCALE		// only use -1.25 to 1.25V range
+#define FULL_SCALE		// only use -1.25 to 1.25V range
 
 // most vector scopes don't have brightness control, but set it anyway
 #undef CONFIG_BRIGHTNESS
