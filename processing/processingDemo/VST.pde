@@ -6,7 +6,7 @@ Serial createSerial() {
   // should look for one that matches "ttyACM*" or "tty.usbmodem*"
   for (String port : Serial.list()) {
     println(port);
-    if (match(port, "usbmode|ACM") == null) {
+    if (match(port, "usbmode|ACM|COM") == null) {
       continue;
     }
     return new Serial(this, port, 9600);
